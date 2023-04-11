@@ -1,0 +1,281 @@
+@model IEnumerable<Product>
+@{
+       ViewData["Title"] = "Catalog " + @ViewBag.category;
+}
+    <main class="main-wrapper">
+        
+        <!-- Start Categorie Area  -->
+        <div class="axil-categorie-area bg-color-white axil-section-gapcommon">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <span class="title-highlighter highlighter-secondary"> <i class="far fa-tags"></i> Categories</span>
+                    <h2 class="title">Category</h2>
+                </div>
+                <div class="categrie-product-activation slick-layout-wrapper--15 axil-slick-arrow  arrow-top-slide">
+                    <div class="slick-single-layout">
+                        <div class="categrie-product" data-sal="zoom-out" data-sal-delay="200" data-sal-duration="500">
+                            <a href="@Url.Action("Index", "Shopping", new { Category = "Phones" })">
+                                <img class="img-fluid" src="./images/product/categories/elec-4.png" alt="product categorie">
+                                <h6 class="cat-title">Phones</h6>
+                            </a>
+                        </div>
+                        <!-- End .categrie-product -->
+                    </div>
+                    <!-- End .slick-single-layout -->
+                    <div class="slick-single-layout">
+                        <div class="categrie-product" data-sal="zoom-out" data-sal-delay="300" data-sal-duration="500">
+                            <a href="@Url.Action("Index", "Shopping", new { Category = "Computers" })">
+                                <img class="img-fluid" src="./images/product/categories/elec-5.png" alt="product categorie">
+                                <h6 class="cat-title">Computers</h6>
+                            </a>
+                        </div>
+                        <!-- End .categrie-product -->
+                    </div>
+                    <!-- End .slick-single-layout -->
+                    <div class="slick-single-layout">
+                        <div class="categrie-product" data-sal="zoom-out" data-sal-delay="400" data-sal-duration="500">
+                            <a href="@Url.Action("Index", "Shopping", new { Category = "Accessories" })">
+                                <img class="img-fluid" src="./images/product/categories/elec-11.png" alt="product categorie">
+                                <h6 class="cat-title">Accessories</h6>
+                            </a>
+                        </div>
+                        <!-- End .categrie-product -->
+                    </div>
+                    <!-- End .slick-single-layout -->
+                    <div class="slick-single-layout">
+                        <div class="categrie-product" data-sal="zoom-out" data-sal-delay="500" data-sal-duration="500">
+                            <a href="@Url.Action("Index", "Shopping", new { Category = "Laptops" })">
+                                <img class="img-fluid" src="./images/product/categories/elec-6.png" alt="product categorie">
+                                <h6 class="cat-title">Laptops</h6>
+                            </a>
+                        </div>
+                        <!-- End .categrie-product -->
+                    </div>
+                    <!-- End .slick-single-layout -->
+                    <div class="slick-single-layout">
+                        <div class="categrie-product" data-sal="zoom-out" data-sal-delay="600" data-sal-duration="500">
+                            <a href="@Url.Action("Index", "Shopping", new { Category = "Monitors" })">
+                                <img class="img-fluid" src="./images/product/categories/elec-2.png" alt="product categorie">
+                                <h6 class="cat-title">Monitors</h6>
+                            </a>
+                        </div>
+                        <!-- End .categrie-product -->
+                    </div>
+                    <!-- End .slick-single-layout -->
+                    <div class="slick-single-layout">
+                        <div class="categrie-product" data-sal="zoom-out" data-sal-delay="700" data-sal-duration="500">
+                            <a href="@Url.Action("Index", "Shopping", new { Category = "Networking" })">
+                                <img class="img-fluid" src="./images/product/categories/elec-7.png" alt="product categorie">
+                                <h6 class="cat-title">Networking</h6>
+                            </a>
+                        </div>
+                        <!-- End .categrie-product -->
+                    </div>
+                    <!-- End .slick-single-layout -->
+                    <div class="slick-single-layout">
+                        <div class="categrie-product" data-sal="zoom-out" data-sal-delay="800" data-sal-duration="500">
+                            <a href="@Url.Action("Index", "Shopping", new { Category = "Gaming" })">
+                                <img class="img-fluid" src="./images/product/categories/elec-8.png" alt="product categorie">
+                                <h6 class="cat-title">PC Gaming</h6>
+                            </a>
+                        </div>
+                        <!-- End .categrie-product -->
+                    </div>
+                    <!-- End .slick-single-layout -->
+                    <div class="slick-single-layout">
+                        <div class="categrie-product">
+                            <a href="@Url.Action("Index", "Shopping", new { Category = "watches" })">
+                                <img class="img-fluid" src="./images/product/categories/elec-1.png" alt="product categorie">
+                                <h6 class="cat-title">Smartwatches</h6>
+                            </a>
+                        </div>
+                        <!-- End .categrie-product -->
+                    </div>
+                    <!-- End .slick-single-layout -->
+                    <div class="slick-single-layout">
+                        <div class="categrie-product">
+                            <a href="@Url.Action("Index", "Shopping", new { Category = "Headphones" })">
+                                <img class="img-fluid" src="./images/product/categories/elec-9.png" alt="product categorie">
+                                <h6 class="cat-title">Headphones</h6>
+                            </a>
+                        </div>
+                        <!-- End .categrie-product -->
+                    </div>
+                    <!-- End .slick-single-layout -->
+                    <div class="slick-single-layout">
+                        <div class="categrie-product">
+                            <a href="@Url.Action("Index", "Shopping", new { Category = "Camera" })">
+                                <img class="img-fluid" src="./images/product/categories/elec-10.png" alt="product categorie">
+                                <h6 class="cat-title">Camera & Photo</h6>
+                            </a>
+                        </div>
+                        <!-- End .categrie-product -->
+                    </div>
+                    <!-- End .slick-single-layout -->
+                    <div class="slick-single-layout">
+                        <div class="categrie-product">
+                            <a href="@Url.Action("Index", "Shopping", new { Category = "Video Games" })">
+                                <img class="img-fluid" src="./images/product/categories/elec-8.png" alt="product categorie">
+                                <h6 class="cat-title">Video Games</h6>
+                            </a>
+                        </div>
+                        <!-- End .categrie-product -->
+                    </div>
+                    <!-- End .slick-single-layout -->
+                    <div class="slick-single-layout">
+                        <div class="categrie-product">
+                            <a href="@Url.Action("Index", "Shopping", new { Category = "Spots" })">
+                                <img class="img-fluid" src="./images/product/categories/elec-1.png" alt="product categorie">
+                                <h6 class="cat-title">Sports</h6>
+                            </a>
+                        </div>
+                        <!-- End .categrie-product -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Categorie Area  -->
+
+        
+        <!-- Start Expolre Product Area  -->
+        <div class="axil-product-area bg-color-white axil-section-gap">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <span class="title-highlighter highlighter-primary"> <i class="far fa-shopping-basket"></i> Our Products</span>
+                    <h2 class="title">Explore our Products</h2>
+                </div>
+                <div class="explore-product-activation slick-layout-wrapper slick-layout-wrapper--15 axil-slick-arrow arrow-top-slide">
+                    <div class="slick-single-layout">
+                        <div class="row row--15">
+                            @foreach (Product item in Model)
+                            {
+                               
+                            <div class="col-xl-3 col-lg-4 col-sm-6 col-12 mb--30">
+                                <div class="axil-product product-style-one">
+                                    <div class="thumbnail">
+                                        <a href="#">
+                                            <img data-sal="zoom-out" data-sal-delay="200" data-sal-duration="800" loading="lazy" class="main-img" src="@item.img" alt="Product Images">
+                                            <img class="hover-img" src="@item.img" alt="Product Images">
+                                        </a>
+                                        @if(@item.discount>0){
+                                            var disc = @Convert.ToString(@Convert.ToDecimal(@item.discount * 100)) + "% Off";
+
+                                        <div class="label-block label-right">
+                                            <div class="product-badget"> @disc</div>
+                                        </div>
+                                        }
+                                        <div class="product-hover-action">
+                                            <ul class="cart-action">
+                                                <li class="quickview"><a href="#" data-bs-toggle="modal" data-bs-target="#quick-view-modal"><i class="far fa-eye"></i></a></li>
+                                                <li class="select-option">
+                                                    @* <a asp-action="productview" asp-controller="Shopping" asp->
+                                                        Add to Cart
+                                                    </a> *@
+                                                
+                                                
+                                                @Html.ActionLink(" View Product","productview","Shopping",item)
+                                                  
+                                                </li>
+                                                <li class="wishlist"><a href="wishlist.html"><i class="far fa-heart"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product-content">
+                                        <div class="inner">
+                                            <div class="product-rating">
+                                                <span class="icon">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </span>
+                                               <!-- <span class="rating-number">(64)</span> -->
+                                            </div>
+                                            <h5 class="title"><a href="#">@item.product_name</a></h5>
+                                            <div class="product-price-variant">
+                                                <span class="price current-price">R @item.price</span>
+                                                @if(@item.discount>0){
+                                                     <span class="price old-price">R @item.old_price</span>
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Single Product  -->
+                        
+                            }
+                            
+                           
+                        </div>
+                    </div>
+                    <!-- End .slick-single-layout -->
+                    
+            </div>
+        </div>
+        <!-- End Expolre Product Area  -->
+
+     
+
+      
+        <!-- Start Why Choose Area  -->
+        <div class="axil-why-choose-area pb--50 pb_sm--30">
+            <div class="container">
+                <div class="section-title-wrapper section-title-center">
+                    <span class="title-highlighter highlighter-secondary"><i class="fal fa-thumbs-up"></i>Why Us</span>
+                    <h2 class="title">Why People Choose Us</h2>
+                </div>
+                <div class="row row-cols-xl-5 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 row--20">
+                    <div class="col">
+                        <div class="service-box">
+                            <div class="icon">
+                                <img src="./images/icons/service6.png" alt="Service">
+                            </div>
+                            <h6 class="title">Fast &amp; Secure Delivery</h6>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="service-box">
+                            <div class="icon">
+                                <img src="./images/icons/service7.png" alt="Service">
+                            </div>
+                            <h6 class="title">100% Guarantee On Product</h6>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="service-box">
+                            <div class="icon">
+                                <img src="./images/icons/service8.png" alt="Service">
+                            </div>
+                            <h6 class="title">24 Hour Return Policy</h6>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="service-box">
+                            <div class="icon">
+                                <img src="./images/icons/service9.png" alt="Service">
+                            </div>
+                            <h6 class="title">24 Hour Return Policy</h6>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="service-box">
+                            <div class="icon">
+                                <img src="./images/icons/service10.png" alt="Service">
+                            </div>
+                            <h6 class="title">Next Level Pro Quality</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Why Choose Area  -->
+
+
+      
+
+    </main>
+
+
+   

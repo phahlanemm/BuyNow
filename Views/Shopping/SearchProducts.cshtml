@@ -1,0 +1,52 @@
+@model IEnumerable<Product>
+
+@{
+        var rescont=0;
+        if(@Model != null){
+     
+    rescont=@Model.Count();
+        }
+}
+    <div class="card-body">
+
+                @if(rescont==0){
+                
+                <div class="psearch-results">
+                    <h2 class="title">NO Result Found</h2>
+               </div>
+
+                }else{
+                <div class="search-result-header">
+                    <h6 class="title">@rescont Result Found</h6>
+                    <a href="@Url.Action("ViewAllProducts")" class="view-all">View All</a>
+                </div>
+                
+                <div class="psearch-results">
+                    @foreach (Product item in @Model.Take(5))
+                    {
+                        
+                   
+                    <div class="axil-product-list">
+                        <div class="thumbnail">
+                            <a href="@Url.Action("productview", "Shopping", item)">
+                                <img src="@item.img" alt="@item.product_name">
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            
+                            <h6 class="product-title"><a href="@Url.Action("productview", "Shopping", item)">@item.product_name</a></h6>
+                            <div class="product-price-variant">
+                                <span class="price current-price">R @item.price</span>
+                                <span class="price old-price">R @item.old_price</span>
+                            </div>
+                            <div class="product-cart">
+                                <a href="@Url.Action("AddToCart", "Shopping",item)" class="cart-btn"><i class="fal fa-shopping-cart"></i></a>
+                                <a href="#" class="cart-btn"><i class="fal fa-heart"></i></a>
+                            </div>
+                        </div> 
+                       
+                    </div>
+                    }
+                </div>
+                }
+            </div>

@@ -1,0 +1,164 @@
+@model Product
+@{
+
+    ViewData["Title"]="View Product";
+}
+
+
+    <main class="main-wrapper">
+        <!-- Start Shop Area  -->
+        <div class="axil-single-product-area bg-color-white">
+            <div class="single-product-thumb axil-section-gap pb--30 pb_sm--20">
+                <div class="container">
+                    <div class="row row--50">
+                        <div class="col-lg-6 mb--40">
+                            <div class="h-100">
+                                <div class="position-sticky sticky-top">
+                                    <div class="single-product-thumbnail axil-product">
+                                        <div class="thumbnail">
+                                            <img src="@Model.img" alt="Product Images">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mb--40">
+                            <div class="h-100">
+                                <div class="position-sticky sticky-top">
+                                    <div class="single-product-content nft-single-product-content">
+                                        <div class="inner">
+                                            <h2 class="product-title">@Model.product_name</h2>
+                                            <div class="price-amount price-offer-amount">
+                                                <span class="price current-price">R @Model.price</span>
+                                            </div>
+
+                                            <!-- Start Product Action Wrapper  -->
+                                            <div class="product-action-wrapper d-flex-center">
+
+                                                <!-- Start Product Action  -->
+                                                <ul class="product-action action-style-two d-flex-center mb--0">
+                                                    <li class="add-to-cart"><a href="@Url.Action("AddToCart", "Shopping", Model)" class="axil-btn btn-bg-primary">Add To Cart</a></li>
+                                                </ul>
+                                                <!-- End Product Action  -->
+                                            </div>
+
+                                            <div class="nft-short-meta">
+                                                <div class="row align-items-center">
+                                                    <div class="col-md-6">
+                                                        <div class="nft-category">
+                                                            <label>Category :</label>
+                                                            <div class="category-list">
+                                                                <a href="#">@Model.category</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                       
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="woocommerce-tabs wc-tabs-wrapper bg-vista-white nft-info-tabs">
+                                                <div class="container">
+                                                    <ul class="nav tabs" id="myTab" role="tablist">
+                                                        <li class="nav-item" role="presentation">
+                                                            <a class="active" id="description-tab" data-bs-toggle="tab" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+                                                        </li>
+                                                        <li class="nav-item " role="presentation">
+                                                            <a id="additional-info-tab" data-bs-toggle="tab" href="#additional-info" role="tab" aria-controls="additional-info" aria-selected="false">Additional Information</a>
+                                                        </li>
+                                                        
+                                                    </ul>
+                                                    <div class="tab-content" id="myTabContent">
+                                                        <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
+                                                            <div class="product-additional-info">
+                                                                <p class="mb--15"><strong>About this Product</strong></p>
+                                                                <p>@Model.product_name. </p>
+                                                                <div class="table-responsive">
+                                                                    <table>
+                                                                        <tbody>
+                                                                             <tr>
+                                                                                <td>@Model.brand</td>
+                                                                                <th>Brand</th>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>@Model.category</td>
+                                                                         <th>Collection </th>
+                                                                                   </tr>
+                                                                            <tr>
+                                                                                <td>@Model.sp_category</td>
+                                                                                <th>Category </th>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-pane fade" id="additional-info" role="tabpanel" aria-labelledby="additional-info-tab">
+                                                            <div class="product-additional-info">
+                                                                <div class="table-responsive">
+                                                                    <table>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                
+                                                                                    @if(@Model.discount>0)
+                                                                                    { 
+                                                                                        <td>Yes</td>
+                                                                                        }
+                                                                                    else {
+
+                                                                                      <td>No</td>
+                                                                                    }
+                                                                                <th>?On Promotion</th>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                 @if(@Model.discount>0)
+                                                                                    { 
+                                                                                        <td>% @(Convert.ToDecimal(Model.discount*100))</td>
+                                                                                        }
+                                                                                    else {
+
+                                                                                      <td>-</td>
+                                                                                    }
+                                                                                        <th>Discount </th>
+                                                                            
+                                                                            </tr>
+                                                                            <tr>
+                                                                                 @if(@Model.discount>0)
+                                                                                    { 
+                                                                                        <td>R @(Model.old_price - Model.price)</td>
+                                                                                        }
+                                                                                    else {
+
+                                                                                      <td>-</td>
+                                                                                    }
+                                                                             <th>Total Savings</th>
+                                                                            
+                                                                            </tr>
+                                                                           
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                       
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- woocommerce-tabs -->
+
+
+                                            <!-- End Product Action Wrapper  -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End .single-product-thumb -->
+        </div>
+        <!-- End Shop Area  -->
+
+          </main>
