@@ -16,6 +16,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/Monty/Apps/BuyNow
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/Monty/Apps/BuyNow/Views/Account/forgotpassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9mb3Jnb3RwYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/Monty/Apps/BuyNow/Views/Account/myaccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9teWFjY291bnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/Monty/Apps/BuyNow/Views/Home/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9pbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

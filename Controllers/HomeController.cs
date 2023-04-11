@@ -22,12 +22,6 @@ public class HomeController : Controller
          if (HttpContext.Session.Get("cart")!=null)  
            {  
                List<Product> li = new List<Product>();  
-
-             //  HttpContext.Session.SetString("cart",JsonConvert.SerializeObject(li)); 
-              // ViewBag.cart = li.Count();            
-              // HttpContext.Session.SetInt32("count",li.Count());  
-  
-  
            }  
            else  
            {
